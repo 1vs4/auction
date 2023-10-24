@@ -1,0 +1,113 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: 'MarcellusSC-Regular';
+    src: url("../font/MarcellusSC-Regular.ttf");
+}
+
+@font-face {
+    font-family: 'Marmelad-Regular';
+    src: url("../font/Marmelad-Regular.ttf");
+}
+
+body {
+    background-color: #020607;
+    font-family: 'Marmelad-Regular', sans-serif;
+    color: white;
+}
+
+.contanier {
+    max-width: 1400px; /* максимальная ширина контейнера*/
+    margin: 0 auto;   /* что бы контент был по центру */
+}
+
+.main {
+    background-image: url('../img/background_products.png');
+    height: 923px;
+    background-position: top center;
+
+    
+}
+
+.header {
+    padding: 40px 0 140px; /* внутренние отступы сверху 40 и снизу 140 спрва и слева 0*/
+}
+
+.header .contanier { /* для контейнера в хэдере */
+    display: flex;   /* внутренние элементы в одну строку */
+    align-items: center; /* по вертикали элементы выравнивались по центру */
+}
+
+.logo img {
+    vertical-align: bottom; /* что бы не было нижнего отступа по умолчанию */ 
+}
+
+.menu {
+    margin-left: 150px;
+    margin-right: 150px;
+
+}
+
+.menu-list {
+    list-style: none;/* убрать маркеры у списка */
+    display: flex;
+}
+
+.menu-item {
+    margin-right: 88px;
+}
+
+.menu-item a { 
+    font-size: 28px;
+    color: #FFF;
+    text-decoration: none; /* убрать подчеркивание у ссылок */
+    cursor: pointer;
+}
+
+.menu-item a:hover {
+    color: gray;
+}
+
+.menu-item:last-child {
+    margin-right: 0;
+}
+
+.log-in-out {
+    color: white;
+    margin-right: 0px;
+    font-size: 40px;
+    width: 155px;
+    height: 50px;
+    text-align: center;
+    cursor: pointer;
+    line-height: 50px; /* высота строки */
+    margin-left: 0; /* блок находился справа */
+    user-select: none; /* пользователь не мог выделять внутренний текст */
+}
+
+.log-in-out:hover {
+    color: gray;
+}
+
+
+.card {
+    background-color: #020607;
+}
+
+.card .card-body {
+    font-family: 'MarcellusSC-Regular', sans-serif;
+    width: 100%;
+}
+    
+.card .card-body h4 {
+    text-align: center !important;
+}
+
+.card .card-body h5 {
+    text-align: center !important;
+    width: 400px;
+    margin-left: 80px;
+}
