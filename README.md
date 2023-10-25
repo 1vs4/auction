@@ -1,5 +1,5 @@
 <p align="center">
-      <img src="https://i.ibb.co/Xk7QWLZ/logo-git.jpg" alt = "auction logo" width="726">
+      <img src="https://i.ibb.co/jwqhFJP/largelogo.png" alt = "auction logo" width="726">
 </p>
 
 <p align="center">
@@ -21,7 +21,7 @@ Terms of reference, explanatory note, class diagram and other UML diagrams. The 
 - [Arina Loseva](https://github.com/ArinaLoseva)
 - [Alexander Bazhenov](https://github.com/orgs/1vs4/people/SashaBazh)
 - [Ksenia Tanyukevich](https://github.com/orgs/1vs4/people/mercusti-ikv3)
-- [Igor Evdokimov](https://github.com/shailushai)
+- [Igor Evdokimov](https://github.com/orgs/1vs4/people/shailuishai)
 
 ## License
 This project is distributed under the MIT license.
