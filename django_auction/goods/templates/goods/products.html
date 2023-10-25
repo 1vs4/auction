@@ -1,39 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Products</title>
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/products.css">
-</head>
-<body>
+{% extends 'goods/base.html' %}
+{% load static %}
 
-<section class="main">
-    <header class="header">
-        <div class="contanier">
-            <div class="logo">
-                <img src="icons/Logo3.png" alt="Logo">
-            </div>
-            <nav class="menu">
-                <ul class="menu-list">
-                    <li class="menu-item">
-                        <a href="#">products</a>
-                    </li> 
-                    <li class="menu-item">
-                        <a href="#">orders</a>
-                    </li>
-                    <li class="menu-item">
-                        <a href="#">personal area</a>
-                    </li>
-                </ul>
-            </nav>
-            <div class="log-in-out">sing out</div>
-        </div>
-    </header>
 
-    <section class="products">
-        
+{% block css %}
+	<link rel="stylesheet" href="{% static 'vendor/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'vendor/css/products.css' %}">
+{% endblock %}
+
+
+{% block content %}
+	<section class="products">
+
         <div class="row">
 
                <div class="col-lg-4 col-md-6 mb-4">
@@ -49,7 +26,7 @@
                         <h5 class="card-title" style="object-fit: contain; height: 110px;">
                             <a href="#" class="text-white">CLOCK OF LOVE AND PSYCHE, BY CLAUDE MICHALLON</a>
                         </h5>
-                       
+
                    </div>
                    <div class="card-footer text-center">
                    </div>
@@ -58,5 +35,6 @@
 
        </div>
     </section>
+{% endblock %}
 
-</section>
+
