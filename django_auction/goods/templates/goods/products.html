@@ -3,8 +3,8 @@
 
 
 {% block css %}
-	<link rel="stylesheet" href="{% static 'vendor/css/bootstrap.min.css' %}">
     <link rel="stylesheet" href="{% static 'vendor/css/products.css' %}">
+	<link rel="stylesheet" href="{% static 'vendor/css/bootstrap.min.css' %}">
 {% endblock %}
 
 
@@ -13,18 +13,19 @@
 
         <div class="row">
 
-               <div class="col-lg-4 col-md-6 mb-4">
+            {% for product in object_list %}
+                <div class="col-lg-4 col-md-6 mb-4">
                <div class="card h-100">
                    <a href="#">
                        <img class="card-img-top"
-                            src="img/product1.png"
+                            src="{{ product.image.url }}"
                             alt=""
                             style="object-fit: contain; width: 100%; height: 400px;">
                    </a>
                    <div class="card-body">
-                        <h4>6 700 € </h4>
+                        <h4>{{ product.price }} € </h4>
                         <h5 class="card-title" style="object-fit: contain; height: 110px;">
-                            <a href="#" class="text-white">CLOCK OF LOVE AND PSYCHE, BY CLAUDE MICHALLON</a>
+                            <a href="#" class="text-white">{{ product.description }}</a>
                         </h5>
 
                    </div>
@@ -32,6 +33,7 @@
                    </div>
                </div>
            </div>
+            {% endfor %}
 
        </div>
     </section>

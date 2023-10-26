@@ -1,11 +1,11 @@
 from django.urls import path
 
-from goods.views import GoodsView
+from goods.views import GoodsListView
 
 app_name = 'goods'
 
 
 urlpatterns = [
-    path('', GoodsView.as_view(), name='goods'),
+    path('', GoodsListView.as_view(), name='index'),
 
 ]
