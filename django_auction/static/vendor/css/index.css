@@ -1,0 +1,194 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: 'MarcellusSC-Regular';
+    src: url("../font/MarcellusSC-Regular.ttf");
+}
+
+@font-face {
+    font-family: 'Marmelad-Regular';
+    src: url("../font/Marmelad-Regular.ttf");
+}
+
+body {
+    background-color: #020607;
+    background: url("../img/background_index.png") no-repeat center top fixed;
+    font-family: 'Marmelad-Regular', sans-serif;
+    color: white;
+}
+
+.contanier {
+    max-width: 1400px; /* максимальная ширина контейнера*/
+    margin: 0 auto;   /* что бы контент был по центру */
+}
+
+.main {
+    /*background-image: url('../img/background.png');*/
+    height: 923px;
+    background-position: top center;
+
+
+}
+
+.header {
+    padding: 40px 0 ; /* внутренние отступы сверху и снизу по 40 спрва и слева 0*/
+}
+
+.header .contanier { /* для контейнера в хэдере */
+    display: flex;   /* внутренние элементы в одну строку */
+    align-items: center; /* по вертикали элементы выравнивались по центру */
+}
+
+.logo img {
+    vertical-align: bottom; /* что бы не было нижнего отступа по умолчанию */
+}
+
+.menu {
+    margin-left: 150px;
+    margin-right: 150px;
+
+}
+
+.menu-list {
+    list-style: none;/* убрать маркеры у списка */
+    display: flex;
+}
+
+.menu-item {
+    margin-right: 88px;
+}
+
+.menu-item a {
+    font-size: 28px;
+    color: #FFF;
+    text-decoration: none; /* убрать подчеркивание у ссылок */
+    cursor: pointer;
+}
+
+.menu-item a:hover {
+    color: gray;
+}
+
+.menu-item:last-child {
+    margin-right: 0;
+}
+
+.log-in-out {
+    margin-right: 0px;
+    font-size: 40px;
+    width: 140px;
+    height: 50px;
+    text-align: center;
+    cursor: pointer;
+    line-height: 50px; /* высота строки */
+    margin-left: 0; /* блок находился справа */
+    user-select: none; /* пользователь не мог выделять внутренний текст */
+}
+
+.log-in-out:hover {
+    color: gray;
+}
+
+.main-content {
+    padding-top: 350px;
+    padding-bottom: 50px;
+    padding-left: 580px;
+}
+
+.main-info {
+    max-width: 900px;
+    text-align: right;
+}
+
+.main-title {
+    font-family: 'MarcellusSC-Regular', sans-serif;
+    font-size: 90px;
+    margin-bottom: 35px;
+}
+
+.main-title2 {
+    font-family: 'MarcellusSC-Regular', sans-serif;
+    font-size: 38px;
+    margin-bottom: 35px;
+}
+
+@media screen and (max-width: 1225px) {
+
+    .main {
+        background: none;
+    }
+
+    .container {
+    padding-left: 15px;
+    padding-right: 15px;
+    }
+
+    .header .container {
+    flex-wrap: wrap;
+    max-width: 420px;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    }
+
+    .logo {
+    order: 1;
+    }
+
+    .log-in-out {
+        margin-left: 20px;
+        order: 2;
+    }
+
+    .menu {
+    margin: 20px 0;
+    order: 3;
+    flex-basis: 100%;
+    }
+
+    .menu-list {
+    justify-content: space-between;
+    }
+
+    .menu-item {
+    margin-left: 5px;
+    margin-right: 5px;
+    text-align: center;
+    }
+
+    .main-content {
+    padding-top: 20px;
+    padding-left: 0;
+    text-align: center;
+    }
+
+    .main-info {
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    }
+
+    .main-title {
+    font-size: 60px;
+    }
+
+    .main-title2 {
+    font-size: 32px;
+    }
+
+    }
+
+    @media screen and (max-width: 570px) {
+
+    .main-title {
+    font-size: 40px;
+    }
+
+    .main-title2 {
+    font-size: 24px;
+    }
+
+    }
