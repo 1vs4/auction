@@ -1,0 +1,28 @@
+body {
+    background-color: #020607;
+    color: white;
+    overflow-x:hidden;
+}
+
+.card {
+    background-color: #020607;
+}
+
+.card .card-body {
+    font-family: 'MarcellusSC-Regular', sans-serif;
+    width: 100%;
+}
+
+.card .card-body h4 {
+    text-align: center !important;
+}
+
+.card .card-body h5 {
+    text-align: center !important;
+    width: 400px;
+    margin-left: 80px;
+}
+
+.products {
+    margin-top: 150px;
+}
