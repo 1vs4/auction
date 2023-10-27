@@ -16,6 +16,8 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from django.conf.urls.static import static
+
+from users.views import logout
 from . import settings
 from goods.views import IndexView
 
@@ -24,7 +26,6 @@ urlpatterns = [
     path('', IndexView.as_view(), name='index'),
     path('goods/', include('goods.urls', namespace='goods')),
     path('users/', include('users.urls', namespace='urls')),
-
 ]
 
 if settings.DEBUG:
