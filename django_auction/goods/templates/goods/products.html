@@ -4,38 +4,42 @@
 
 {% block css %}
     <link rel="stylesheet" href="{% static 'vendor/css/products.css' %}">
-	<link rel="stylesheet" href="{% static 'vendor/css/bootstrap.min.css' %}">
 {% endblock %}
 
 
 {% block content %}
-	<section class="products">
+	<section class="main-content">
+        <div class="container mt-5">
+            <div class="row">
 
-        <div class="row">
-
-            {% for product in object_list %}
-                <div class="col-lg-4 col-md-6 mb-4">
-               <div class="card h-100">
-                   <a href="#">
-                       <img class="card-img-top"
-                            src="{{ product.image.url }}"
-                            alt=""
-                            style="object-fit: contain; width: 100%; height: 400px;">
-                   </a>
-                   <div class="card-body">
-                        <h4>{{ product.price }} € </h4>
-                        <h5 class="card-title" style="object-fit: contain; height: 110px;">
-                            <a href="#" class="text-white">{{ product.description }}</a>
-                        </h5>
-
-                   </div>
-                   <div class="card-footer text-center">
-                   </div>
-               </div>
-           </div>
-            {% endfor %}
-
-       </div>
+{#                {% for product in object_list %}#}
+                <div class="col-lg-6">
+                    <div class="item">
+                        <img src="{% static 'vendor/img/3.png' %}" alt="Product Image" class="img-large">{# {{ product.image.url }}#}
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="text">
+                        <h2>ROCAILLE CLOCK IN PORCELAIN IN THE TASTE OF JACOB PETIT (1796-1865), 19TH CENTURY
+                        </h2>{# {{ product.name }}#}
+                        <p>Circa: 1850
+                            Dim: W: 35cm, D: 20cm, H: 56cm.Dim: W: 13,8in, D: 7,9in, H: 22in.
+                            Condition report: In good general condition.
+                            Eppque: 19th century
+                            Style: Rocaille
+                            Materials: Porcelain, Enamel
+                            LP : 2302
+                            Width: 35 (cm)
+                            Height 56 (cm)
+                            Depth 20 (cm)
+                            Delivery: Calculated at time of payment</p>{# {{ product.description  }}#}
+                        <a>4400 €</a> {# {{ product.price }}#}
+                        <a class="btn btn-outline-success" href="#">Offer more</a>
+                    </div>
+                </div>
+            </div>
+{#            {% endfor %}#}
+        </div>
     </section>
 {% endblock %}
 

@@ -1,0 +1,170 @@
+.card {
+    display: flex;
+    flex-direction: column;
+}
+
+.card .img1 {
+    width: 100%;
+    height: auto;
+}
+
+.card-content {
+    margin-top: 10px;
+}
+
+
+
+
+body {
+    background: black no-repeat center top fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+    padding-top: 56px;
+}
+
+#start-purchase-btn {
+    background-color: black;
+    border-color: black;
+    color: white;
+    border-radius: 30px;
+    width: 200px;
+    height: 50px;
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#start-purchase-btn:hover {
+    transform: scale(1.1); /* Увеличиваем размер кнопки на 10% */
+}
+
+#start-purchase-link {
+    text-decoration: none;
+    color: white;
+}
+
+.navbar{
+  display: flex;
+}
+
+.navbar-nav {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.navbar-collapse {
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+@font-face {
+    font-family: 'MarcellusSC-Regular';
+    src: url("../font/MarcellusSC-Regular.ttf");
+}
+
+@font-face {
+    font-family: 'Marmelad-Regular';
+    src: url("../font/Marmelad-Regular.ttf");
+}
+
+
+
+
+@media screen and (max-width: 1225px) {
+
+    .main {
+        background: none;
+    }
+
+    .container {
+    padding-left: 15px;
+    padding-right: 15px;
+    }
+
+    .header .container {
+    flex-wrap: wrap;
+    max-width: 420px;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    }
+
+    .logo {
+    order: 1;
+    }
+
+    .log-in-out {
+        margin-left: 20px;
+        order: 2;
+    }
+
+    .menu {
+    margin: 20px 0;
+    order: 3;
+    flex-basis: 100%;
+    }
+
+    .menu-list {
+    justify-content: space-between;
+    }
+
+    .menu-item {
+    margin-left: 5px;
+    margin-right: 5px;
+    text-align: center;
+    }
+
+    .main-content {
+    padding-top: 300px;
+    padding-left: 0;
+    text-align: center;
+    }
+
+    .main-info {
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    }
+
+    .main-title {
+    font-size: 60px;
+    }
+
+    .main-title2 {
+    font-size: 32px;
+    }
+
+    }
+
+    @media screen and (max-width: 570px) {
+
+    .main-title {
+    font-size: 40px;
+    }
+
+    .main-title2 {
+    font-size: 24px;
+    }
+
+    }
+
+.text-white {
+    color: #fff;
+    font-family: 'Marmelad-Regular', sans-serif;
+}
+
+.navbar-toggler .fa-list {
+    color: white;
+}
+
+.navbar-nav li a:hover {
+    color: gray !important;
+}
+
+.auth-buttons a:hover {
+    color: gray !important;
+}

@@ -23,6 +23,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', IndexView.as_view(), name='index'),
     path('goods/', include('goods.urls', namespace='goods')),
+    path('users/', include('users.urls', namespace='urls')),
+
 ]
 
 if settings.DEBUG:
