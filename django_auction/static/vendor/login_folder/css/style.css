@@ -8348,11 +8348,11 @@ textarea.form-control {
         background: #fbceb5;
         color: #fff; }
 
-.txt2 {
+.txt2 a{
     color: white;
 }
 
-.txt2:hover {
+.txt2 a:hover {
   color: gray;
   cursor: pointer; 
 }
