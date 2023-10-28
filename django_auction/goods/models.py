@@ -11,7 +11,7 @@ class Product(models.Model):
     quantity = models.PositiveIntegerField(default=0)
     image = models.ImageField(upload_to='goods_images')
     expiration = models.DateTimeField()
-    user = models.ForeignKey(to=User, on_delete=models.CASCADE, default=None)
+    user = models.ForeignKey(to=User, on_delete=models.CASCADE, default=User.objects.first())
 
 
     def __str__(self):

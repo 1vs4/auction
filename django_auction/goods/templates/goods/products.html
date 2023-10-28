@@ -11,63 +11,27 @@
     <section class="products">
 
         <div class="row">
-
-            <div class="col-lg-4 col-md-6 mb-4">
+            {% for product in object_list %}
+                <div class="col-lg-4 col-md-6 mb-4">
                 <div class="card h-100">
                     <a href="#">
                         <img class="card-img-top"
-                            src="{% static 'vendor/img/product1.png' %}"
+                            src="{{ product.image.url }}"
                             alt=""
                             style="object-fit: contain; width: 100%; height: 400px;">
                     </a>
                     <div class="card-body">
-                        <h4>6 700 € </h4>
+                        <h4>{{ product.price }} € </h4>
                         <h5 class="card-title" style="object-fit: contain; height: 110px;">
-                            <a href="#" class="text-white">CLOCK OF LOVE AND PSYCHE, BY CLAUDE MICHALLON</a>
+                            <a href="#" class="text-white">{{ product.title }}</a>
                         </h5>
 
                    </div>
                 <div class="card-footer text-center"></div>
                 </div>
             </div>
+            {% endfor %}
 
-            <div class="col-lg-4 col-md-6 mb-4">
-                <div class="card h-100">
-                    <a href="#">
-                        <img class="card-img-top"
-                            src="{% static 'vendor/img/product2.png' %}"
-                            alt=""
-                            style="object-fit: contain; width: 100%; height: 400px;">
-                    </a>
-                    <div class="card-body">
-                        <h4>8 900 € </h4>
-                        <h5 class="card-title" style="object-fit: contain; height: 110px;">
-                            <a href="#" class="text-white">CLOCKIN ALABASTER, "THE ABDUCTION OF EUROPE</a>
-                        </h5>
-
-                   </div>
-                <div class="card-footer text-center"></div>
-                </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 mb-4">
-                <div class="card h-100">
-                    <a href="#">
-                        <img class="card-img-top"
-                            src="{% static 'vendor/img/product3.png' %}"
-                            alt=""
-                            style="object-fit: contain; width: 100%; height: 400px;">
-                    </a>
-                    <div class="card-body">
-                        <h4>9 200 € </h4>
-                        <h5 class="card-title" style="object-fit: contain; height: 110px;">
-                            <a href="#" class="text-white">LARGE LYRE CLOCK IN ELM BURL AND BRONZE</a>
-                        </h5>
-
-                   </div>
-                <div class="card-footer text-center"></div>
-                </div>
-            </div>
 
         </div>
     </section>
