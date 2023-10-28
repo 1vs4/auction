@@ -12,7 +12,8 @@
                 <div class="col-md-6 col-lg-4">
                     <div class="login-wrap p-0">
                         <h3 class="mb-4 text-center">Don't have an account?</h3>
-                        <form action="#" class="signin-form">
+                        <form action="{% url 'users:registration' %}" method="post" class="signin-form">
+                            {% csrf_token %}
                             <div class="form-group">
                                 {{ form.username }}
 {#                                <input type="text" class="form-control" placeholder="Username" required>#}
@@ -46,7 +47,7 @@
 
                             <div class="text-center p-t-136">
                                 <i class="txt2">
-                                    <a href="#">Have an account? sign in</a>
+                                    <a href="{% url 'users:login' %}">Have an account? sign in</a>
                                 </i>
                             </div>
 

@@ -15,6 +15,9 @@ class UserLoginView(TitleMixin, LoginView):
     form_class = UserLoginForm
     title = 'Store - Login'
 
+    def get_success_url(self):
+        return reverse_lazy('index')
+
 
 class UserRegistrationView(TitleMixin, SuccessMessageMixin, CreateView):
     model = User
