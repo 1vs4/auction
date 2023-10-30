@@ -6,7 +6,7 @@ from django.views.generic.edit import FormMixin
 from common.views import TitleMixin
 from goods.forms import ProductOfferMoreForm
 from goods.models import Product
-
+from users.models import User
 
 class IndexView(TitleMixin, TemplateView):
     template_name = 'goods/index.html'
@@ -41,10 +41,11 @@ class ProductDetailView(FormMixin, DetailView):
         form = self.get_form()
         if form.is_valid() and form.cleaned_data['price'] > int(self.object.price):
             self.object.price = form.cleaned_data['price']
+
+            self.object.user = request.user
             self.object.save()
 
             return self.form_valid(form)
         else:
-            form.add_error('price', 'Ошибка: некорректное значение цены')
             return self.form_invalid(form)
 

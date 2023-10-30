@@ -8,6 +8,6 @@ from goods.models import Product
 @admin.register(Product)
 class ProductAdmin(admin.ModelAdmin):
     list_display = ('name', 'price', 'quantity', 'expiration')
-    fields = ('name', 'description', ('price', 'quantity'), 'image', 'expiration')
+    fields = ('name', 'description', ('price', 'quantity'), 'image1', 'image2', 'expiration', 'user')
     search_fields = ('name',)
     ordering = ('expiration',)

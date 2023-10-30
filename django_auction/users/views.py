@@ -33,7 +33,7 @@ class UserProfileView(TitleMixin, UpdateView):
     form = UserProfileForm
     form_class = UserProfileForm
     template_name = 'users/profile.html'
-    title = 'Store = Profile'
+    title = 'Profile'
 
     def get_success_url(self):
         return reverse_lazy('users:profile', args=(self.object.id,))
