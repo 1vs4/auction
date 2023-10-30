@@ -22,10 +22,20 @@
                     <div class="text">
                         <h2>{{ product_obj.name }}</h2>
                         <p>{{ product_obj.description }}</p>
-                        <a>4400 €</a>
-                        <a class="btn btn-outline-success" href="#">Offer more</a>
+                        <a>{{ product_obj.price }} €</a>
+                        <form action="{% url 'goods:product' product_obj.id %}" method="post">
+                            {% csrf_token %}
+                            <div class="form-row">
+                                <label class="small mb-1" for="{{ form.price.id_for_label }}">Price</label>
+                                {{ form.price }}
+                            </div>
+                            <input class="btn btn-outline-success" type="submit" value="Set">
+                        </form>
+
                     </div>
+
                 </div>
+
             </div>
 
         </div>
