@@ -15,21 +15,21 @@
 
                 <div class="col-lg-6">
                     <div class="item">
-                        <img src="{{ product_obj.image1.url }}" alt="Product Image" class="img-large">
+                        <img src="{{ product_obj.image2.url }}" class="img-large, xzoom" xoriginal="{{ product_obj.image1.url }}">
                     </div>
                 </div>
                 <div class="col-lg-3">
                     <div class="text">
                         <h2>{{ product_obj.name }}</h2>
                         <p>{{ product_obj.description }}</p>
-                        <a>{{ product_obj.price }} €</a>
+                        <h2>{{ product_obj.price }} €</h2>
                         <form action="{% url 'goods:product' product_obj.id %}" method="post">
                             {% csrf_token %}
-                            <div class="form-row">
-                                <label class="small mb-1" for="{{ form.price.id_for_label }}">Price</label>
-                                {{ form.price }}
-                            </div>
-                            <input class="btn btn-outline-success" type="submit" value="Set">
+                                <div class="form-row">
+                                    <label for="{{ form.price.id_for_label }}">Place a bet: </label>
+                                    {{ form.price }}
+                                </div>
+                            <input class="btn btn-outline-success" type="submit" value="Сonfirm">
                         </form>
 
                     </div>

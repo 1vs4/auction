@@ -2,13 +2,18 @@ body {
     background: url("../img/background_product.png") no-repeat center top fixed;
 }
 
+.row {
+    padding-top: 120px !important;
+}
 .img-large {
-    width: 484px;
-    height: 604px;
+/*     width: 484px; */
+/*     height: 604px; */
+    width: 424px;
+    height: 424px;
 }
 
 .col-lg-6 {
-    margin-right: 170px !important;
+    margin-right: 280px !important;
 }
 
 .text {
@@ -17,5 +22,59 @@ body {
 
 .text {
     width: 300px !important;
-    height: 604px !important;
-  }
+    height: 600px !important;
+ }
+
+.modal {
+  position: absolute;
+  top: 450px;
+  left: 0;
+  right: 0;
+}
+
+.modal: hover {
+    cursor: pointer;
+}
+
+.form-row {
+  display: flex;
+  align-items: center;
+}
+
+.form-row label {
+  flex: 1;
+  margin-right: 10px;
+}
+
+.form-row input[type="number"] {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+
+input[type="submit"] {
+  padding: 10px 20px;
+  background-color: gray;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: black;
+}
+
+.form-row {
+  font-size: 22px;
+  margin-right: 20px !important;
+  margin-bottom: 20px;
+}
+
