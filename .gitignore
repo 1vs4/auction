@@ -1,2 +1,2 @@
 venv
-#django_auction/db.sqlite3
+django_auction/db.sqlite3
