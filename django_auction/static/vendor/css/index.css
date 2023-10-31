@@ -19,18 +19,18 @@ body {
     font-family: 'Marmelad-Regular', sans-serif;
     color: white;
 }
+.main-content {
+    padding-left: 280px !important;
+}
 
 .contanier {
-    max-width: 1400px; /* максимальная ширина контейнера*/
+    max-width: 1000px; /* максимальная ширина контейнера*/
     margin: 0 auto;   /* что бы контент был по центру */
 }
 
 .main {
     /*background-image: url('../img/background.png');*/
-    height: 923px;
     background-position: top center;
-
-
 }
 
 .header {
@@ -160,7 +160,7 @@ body {
     }
 
     .main-content {
-    padding-top: 20px;
+    padding-top: 350px;
     padding-left: 0;
     text-align: center;
     }
@@ -190,5 +190,11 @@ body {
     .main-title2 {
     font-size: 24px;
     }
+
+    .main-content {
+    padding-left: 80px !important;
+    padding-top: 350px !important;
+    }
+
 
     }
