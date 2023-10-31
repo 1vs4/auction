@@ -8,19 +8,21 @@ from users.models import User
 class UserRegistrationForm(UserCreationForm):
     username = forms.CharField(widget=forms.TextInput(attrs={
         'class': 'form-control',
-        'placeholder': 'Введите имя пользователя',
+        'placeholder': 'Enter your username',
     }))
     email = forms.EmailField(widget=forms.TextInput(attrs={
         'class': 'form-control',
-        'placeholder': 'Введите адрес эл. почты',
+        'placeholder': 'Enter your email address',
     }))
     password1 = forms.CharField(widget=forms.PasswordInput(attrs={
         'class': 'form-control',
-        'placeholder': 'Введите пароль',
+        'placeholder': 'Enter password',
+        'id': 'password-field',
     }))
     password2 = forms.CharField(widget=forms.PasswordInput(attrs={
         'class': 'form-control',
-        'placeholder': 'Подтвердите пароль',
+        'placeholder': 'Confirm the password',
+        'id': 'password-field2',
     }))
 
     class Meta:
@@ -43,11 +45,12 @@ class UserProfileForm(UserChangeForm):
 class UserLoginForm(AuthenticationForm):
     username = forms.CharField(widget=forms.TextInput(attrs={
         'class': 'form-control',
-        'placeholder': 'Введите имя пользователя',
+        'placeholder': 'Enter your username',
     }))
     password = forms.CharField(widget=forms.PasswordInput(attrs={
         'class': 'form-control',
-        'placeholder': 'Введите пароль',
+        'placeholder': 'Enter password',
+        'id': 'password-field',
     }))
 
     class Meta:
