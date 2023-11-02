@@ -48,6 +48,7 @@ body {
 
 .navbar{
   display: flex;
+  z-index: 9999;
 }
 
 .navbar-nav {

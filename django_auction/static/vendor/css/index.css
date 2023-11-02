@@ -19,9 +19,6 @@ body {
     font-family: 'Marmelad-Regular', sans-serif;
     color: white;
 }
-.main-content {
-    padding-left: 280px !important;
-}
 
 .contanier {
     max-width: 1000px; /* максимальная ширина контейнера*/
@@ -93,9 +90,10 @@ body {
 }
 
 .main-content {
-    padding-top: 350px;
-    padding-bottom: 50px;
-    padding-left: 580px;
+    padding-top: 23%;
+    padding-right: 10%;
+    padding-bottom: 42px;
+    padding-left: 39%;
 }
 
 .main-info {
