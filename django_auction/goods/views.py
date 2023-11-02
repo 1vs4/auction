@@ -5,7 +5,7 @@ from django.views.generic.edit import FormMixin
 
 from common.views import TitleMixin
 from goods.forms import ProductOfferMoreForm
-from goods.models import Product
+from goods.models import Product, Order
 from users.models import User
 
 class IndexView(TitleMixin, TemplateView):
@@ -22,7 +22,10 @@ class GoodsListView(TitleMixin, ListView):
         queryset = super().get_queryset()
 
         for obj in queryset:
-            obj.is_expired()
+            if obj.is_expired():
+                obj.is_active = False
+                obj.save()
+
 
         return queryset
 

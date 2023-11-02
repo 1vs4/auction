@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from goods.models import Product
+from goods.models import Product, Order
 
 
 # Register your models here.
@@ -11,3 +11,8 @@ class ProductAdmin(admin.ModelAdmin):
     fields = ('name', 'description', ('price', 'quantity'), 'image1', 'image2', 'expiration', 'user', 'is_active')
     search_fields = ('name',)
     ordering = ('expiration',)
+
+@admin.register(Order)
+class UserAdmin(admin.ModelAdmin):
+    list_display = ('user',)
+    ordering = ('user',)

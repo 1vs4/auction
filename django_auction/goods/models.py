@@ -24,6 +24,13 @@ class Product(models.Model):
 
     def is_expired(self):
         if now() >= self.expiration:
-            self.is_active = False
+            if not Order.objects.filter(user=self.user, product=self):
+                Order.objects.create(user=self.user, product=self)
+            return True
         else:
             return False
+
+
+class Order(models.Model):
+    user = models.ForeignKey(to=User, on_delete=models.CASCADE, blank=False)
+    product = models.ForeignKey(to=Product, on_delete=models.CASCADE, blank=False)
