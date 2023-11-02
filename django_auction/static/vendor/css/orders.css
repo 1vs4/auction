@@ -1,0 +1,49 @@
+body {
+    background-color: #020607;
+    color: white;
+    overflow-x:hidden;
+}
+
+.p-lr-85 {
+    padding: 0 300px;
+}
+
+.card {
+    background-color: #020607;
+}
+
+.card .card-body {
+    font-family: 'MarcellusSC-Regular', sans-serif;
+    width: 100%;
+}
+
+.card .card-body h4 {
+    text-align: center !important;
+}
+
+.card .card-body h5 {
+    text-align: center !important;
+    width: 400px;
+    margin-left: 80px;
+}
+
+.products {
+    margin-top: 150px;
+}
+
+.card .card-img-top {
+    flex: 0 0 30%;
+}
+
+.card .card-body{
+    flex: 1;
+}
+
+.card .d-flex a {
+    width: 100px !important;
+    width: initial !important;
+}
+
+.card .card-title a {
+    padding-top: 50px;
+}

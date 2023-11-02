@@ -1,0 +1,51 @@
+body {
+    padding-top: 56px;
+    background: url("/static/vendor/login_folder/images/background_login.png") no-repeat center top fixed;
+
+}
+
+.form-control {
+  border: 1px solid #000;
+}
+
+.custom-file-label{
+    border: 1px solid #000;
+}
+
+.btn {
+    color: #fff;
+    background-color: gray;
+    border: 1px solid black;
+    transition: all 0.2s;
+}
+
+.btn:hover {
+    background-color: black;
+    color: #fff;
+}
+
+.small {
+    color: white !important;
+}
+
+.img-thumbnail {
+    border: none;
+    border-radius: 50%;
+    background: black;
+}
+
+.text-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 30px;
+}
+
+
+.fas.fa-trash {
+    color: black;
+}
+
+.custom-file-label{
+    background: #EEEEEC;
+}
