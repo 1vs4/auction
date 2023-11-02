@@ -10,4 +10,5 @@ urlpatterns = [
     path('registration/', UserRegistrationView.as_view(), name='registration'),
     path('profile/<int:pk>', login_required(UserProfileView.as_view()), name='profile'),
     path('logout/', logout, name='logout'),
+    path('orders/', OrderListView.as_view(), name='orders'),
 ]

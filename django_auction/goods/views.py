@@ -18,6 +18,14 @@ class GoodsListView(TitleMixin, ListView):
     model = Product
     title = 'Goods'
 
+    def get_queryset(self):
+        queryset = super().get_queryset()
+
+        for obj in queryset:
+            obj.is_expired()
+
+        return queryset
+
 
 
 class ProductDetailView(FormMixin, DetailView):
