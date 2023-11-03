@@ -1,7 +1,13 @@
+@font-face {
+    font-family: 'Marmelad-Regular';
+    src: url("../font/Marmelad-Regular.ttf");
+}
+
 body {
     padding-top: 56px;
     background: url("/static/vendor/login_folder/images/background_login.png") no-repeat center top fixed;
-
+    background-color: #020607;
+    font-family: 'Marmelad-Regular';
 }
 
 .form-control {

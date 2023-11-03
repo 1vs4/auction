@@ -5,16 +5,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{% static 'vendor/css/base.css' %}">
 
     <title>{{ title }}</title>
 
     <link rel="stylesheet" href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}">
     <link rel="stylesheet" href="{% static 'vendor/css/base.css'%}">
 
+        <style>
+
+        .navbar {
+            background: none;
+        }
+
+        .navbar-nav {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+        }
+
+        .navbar-collapse {
+            margin-left: 100px;
+            margin-right: 100px;
+        }
+
+        </style>
+
     {% block css %} {% endblock %}
 
 </head>
+
 <body>
 <!-- Navigation -->
 <nav class="navbar navbar-expand-lg navbar-light fixed-top">

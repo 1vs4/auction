@@ -1,5 +1,11 @@
+@font-face {
+    font-family: 'Marmelad-Regular';
+    src: url("../font/Marmelad-Regular.ttf");
+}
+
 body {
     background: url("../img/background_product.png") no-repeat center top fixed;
+    font-family: 'Marmelad-Regular';
 }
 
 .row {

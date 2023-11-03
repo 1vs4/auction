@@ -8357,3 +8357,24 @@ textarea.form-control {
   color: gray;
   cursor: pointer; 
 }
+
+@font-face {
+    font-family: 'Marmelad-Regular';
+    src: url("../font/Marmelad-Regular.ttf");
+}
+
+h3 {
+    font-family: 'Marmelad-Regular';
+}
+
+button.submit {
+    font-family: 'Marmelad-Regular';
+}
+
+.form-control {
+    font-family: 'Marmelad-Regular';
+}
+
+input {
+
+}

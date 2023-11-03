@@ -18,11 +18,13 @@ class UserRegistrationForm(UserCreationForm):
         'class': 'form-control',
         'placeholder': 'Enter password',
         'id': 'password-field1',
+        'title': 'Min length 8,capital letters, numbers',
     }))
     password2 = forms.CharField(widget=forms.PasswordInput(attrs={
         'class': 'form-control',
         'placeholder': 'Confirm the password',
         'id': 'password-field2',
+        'title': 'Min length 8,capital letters, numbers',
     }))
 
     class Meta:
@@ -44,11 +46,13 @@ class UserLoginForm(AuthenticationForm):
     username = forms.CharField(widget=forms.TextInput(attrs={
         'class': 'form-control',
         'placeholder': 'Enter your username',
+
     }))
     password = forms.CharField(widget=forms.PasswordInput(attrs={
         'class': 'form-control',
         'placeholder': 'Enter password',
         'id': 'password-field',
+        'title': 'Min length 8,capital letters, numbers',
     }))
 
     class Meta:
