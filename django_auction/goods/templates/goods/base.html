@@ -53,7 +53,7 @@
                 </li>
             {%  if user.is_authenticated  %}
                 <li class="nav-item">
-                    <a class="nav-link text-white" href="#" style="font-size: 24px;">orders <i class=""></i> </a>
+                    <a class="nav-link text-white" href="{% url 'users:orders' %}" style="font-size: 24px;">orders <i class=""></i> </a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link text-white" href="{% url 'users:profile' user.id %}" style="font-size: 24px;">personal area <i class=""></i> </a>
