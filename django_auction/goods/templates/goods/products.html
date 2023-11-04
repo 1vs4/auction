@@ -15,7 +15,7 @@
                 {% if product.is_active %}
                 <div class="col-lg-4 col-md-6 mb-4">
                     <div class="card h-100">
-                        <a href="{% url 'goods:product' product.id %}">
+                        <a {%  if user.is_authenticated  %} href="{% url 'goods:product' product.id %}" {% else %} href="{% url 'users:login' %}" {% endif %}>
                             <img class="card-img-top"
                                  src="{{ product.image1.url }}"
                                  alt=""
@@ -24,7 +24,7 @@
                         <div class="card-body">
                             <h4>{{ product.price }} € </h4>
                             <h4 class="card-title" style="object-fit: contain; height: 110px;">
-                                <a href="{% url 'goods:product' product.id %}" class="text-white">{{ product.name }}</a>
+                                <a {%  if user.is_authenticated  %} href="{% url 'goods:product' product.id %}" {% else %} href="{% url 'users:login' %}" {% endif %} class="text-white">{{ product.name }}</a>
                             </h4>
 
                         </div>
