@@ -2,58 +2,59 @@
 {% load static %}
 
 {% block css %}
-     <link href="{% static 'vendor/css/profile.css' %}" rel="stylesheet">
-     <style>
-         html, body {
-             height: 100%;
-         }
-         body {
-             display: flex;
-             align-items: center;
-             justify-content: center;
-         }
-         .container {
-             width: 100%;
-         }
-     </style>
+    <link href="{% static 'vendor/css/profile.css' %}" rel="stylesheet">
+    <style>
+        html, body {
+            height: 100%;
+        }
+
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .container {
+            width: 100%;
+        }
+    </style>
 {% endblock %}
 
 {% block content %}
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-lg-7">
-                <div class="col-lg-12 text-center">
-                    <img width="100" height="100"
-                         src="{% if user.image %} {{ user.image.url }} {% else %} {% static 'vendor/img/avatar.jpg'%} {% endif %}"
-                         class="img-thumbnail">
-                </div>
+{#                <div class="col-lg-12 text-center">#}
+{#                    <img width="100" height="100"#}
+{#                         src="{% if user.image %} {{ user.image.url }} {% else %} {% static 'vendor/img/avatar.jpg' %} {% endif %}"#}
+{#                         class="img-thumbnail">#}
+{#                </div>#}
                 <form action="{% url 'users:profile' user.id %}" method="post" enctype="multipart/form-data">
                     {% csrf_token %}
-                    <div class="form-row">
-                    </div>
-                    <div class="form-row mb-2">
-                        <div class="col-lg-12">
-                            <div class="custom-file">
-                                {{ form.image }}
-                                <label class="custom-file-label" for="{{ form.image.id_for_label }}">
-                                    Select an image
-                                </label>
-                            </div>
-                        </div>
-                    </div>
+
+{#                    <div class="form-row mb-2">#}
+{#                        <div class="col-lg-12">#}
+{#                            <div class="custom-file">#}
+{#                                {{ form.image }}#}
+{#                                <label class="custom-file-label" for="{{ form.image.id_for_label }}">Выберите#}
+{#                                    изображение</label>#}
+{#                            </div>#}
+{#                        </div>#}
+{#                    </div>#}
                     <div class="form-row">
                         <div class="col-lg-6">
-                            <label class="small mb-1" for="{{ form.username.id_for_label }}">Username</label>
+                            <label class="small mb-1" for="{{ form.username.id_for_label }}">Имя пользователя</label>
                             {{ form.username }}
                         </div>
                         <div class="col-lg-6">
-                            <label class="small mb-1" for="{{ form.email.id_for_label }}">Email</label>
+                            <label class="small mb-1" for="{{ form.email.id_for_label }}">Адрес электронной
+                                почты</label>
                             {{ form.email }}
                         </div>
                     </div>
                     <div class="form-row">
                         <div class="col-lg-12" style="margin-top: 33px;">
-                            <input class="btn btn-block" type="submit" value="Apply changes">
+                            <input class="btn btn-info btn-block" type="submit" value="Сохранить">
                         </div>
                     </div>
                 </form>
