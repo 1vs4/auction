@@ -1,7 +1,7 @@
 body {
     background-color: #020607;
     color: white;
-    overflow-x:hidden;
+    overflow-x: hidden;
 }
 
 .card {
@@ -25,4 +25,7 @@ body {
 
 .products {
     margin-top: 150px;
+    overflow-y: hidden;
+    overflow-x: hidden;
 }
+

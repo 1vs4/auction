@@ -37,7 +37,6 @@ body {
 .img-thumbnail {
     border: none;
     border-radius: 50%;
-    background: black;
 }
 
 .text-center {
